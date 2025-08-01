@@ -1,179 +1,604 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Flipkart Inspired</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-    }
-    .navbar-brand {
-      color: #2874f0 !important;
-      font-weight: bold;
-      font-size: 24px;
-    }
-    .category-card img {
-      height: 150px;
-      object-fit: contain;
-    }
-    .product-card img {
-      height: 200px;
-      object-fit: contain;
-    }
-    .footer {
-      background-color: #172337;
-      color: white;
-      padding: 30px 0;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flipkart Inspired</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+      }
+      .category-card img {
+        height: 150px;
+        object-fit: contain;
+      }
+      .product-card img {
+        height: 200px;
+        object-fit: contain;
+      }
+      .footer {
+        background-color: #172337;
+        color: white;
+        padding: 30px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg"
+            width="160"
+            height="40"
+            title="Flipkart"
+          />
+        </a>
+        <div class="col-md-6">
+          <div class="input-group">
+            <span class="input-group-text" id="basic-addon1">
+              <a href="#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  class="bi bi-search"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                  ></path></svg
+              ></a>
+            </span>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search for Products, Brands and More"
+              aria-label="Search for Products, Brands and More"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+        </div>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown mx-2">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="loginDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fa fa-user"></i> Login
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="loginDropdown">
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fa fa-sign-in-alt"></i> My Profile</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fa fa-box"></i> Orders</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fa fa-heart"></i> Wishlist</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fa fa-sign-out-alt"></i> Logout</a
+                >
+              </li>
+            </ul>
+          </li>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-  <div class="container">
-    <a class="navbar-brand" href="#">Flipkart</a>
-    <form class="d-flex mx-auto w-50">
-      <input class="form-control me-2" type="search" placeholder="Search for products" aria-label="Search">
-    </form>
-    <ul class="navbar-nav ms-auto">
-      <li class="nav-item mx-2">
-        <a class="nav-link" href="#"><i class="fa fa-user"></i> Login</a>
-      </li>
-      <li class="nav-item mx-2">
-        <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i> Cart</a>
-      </li>
-      <li class="nav-item mx-2">
-        <a class="nav-link" href="#"><i class="fa fa-store"></i> Become a Seller</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<!-- Hero Banner Carousel -->
-<div class="container-fluid p-0">
-  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://via.placeholder.com/1500x400?text=Big+Sale+1" class="d-block w-100" alt="Banner 1">
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#"
+              ><i class="fa fa-shopping-cart"></i> Cart</a
+            >
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#"
+              ><i class="fa fa-store"></i> Become a Seller</a
+            >
+          </li>
+          <li class="nav-item dropdown mx-2">
+            <a
+              class="nav-link"
+              href="#"
+              id="moreOptionsDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fa fa-ellipsis-v"></i>
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="moreOptionsDropdown"
+            >
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fa fa-cog"></i> Settings</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fa fa-globe"></i> Language</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fa fa-question-circle"></i> Help Center</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
-      <div class="carousel-item">
-        <img src="https://via.placeholder.com/1500x400?text=New+Arrivals+2" class="d-block w-100" alt="Banner 2">
-      </div>
-      <div class="carousel-item">
-        <img src="https://via.placeholder.com/1500x400?text=Festive+Deals+3" class="d-block w-100" alt="Banner 3">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
-    </button>
-  </div>
-</div>
+    </nav>
+    <!-- Category Navigation Bar -->
+    <div class="container-fluid bg-white py-3 shadow-sm">
+      <div class="container">
+        <div class="row text-center justify-content-between flex-nowrap">
+          <div class="col-auto">
+            <a href="#" class="text-decoration-none text-dark">
+              <img
+                src="https://rukminim1.flixcart.com/fk-p-flap/64/64/image/a22a213ca6221b65.png?q=100"
+                class="mb-1"
+                alt="Mobiles"
+              />
+              <div>Minutes</div>
+            </a>
+          </div>
 
-<!-- Categories -->
-<div class="container my-4">
-  <div class="row text-center">
-    <div class="col-6 col-md-2 category-card mb-3">
-      <img src="https://via.placeholder.com/100" class="img-fluid" alt="Mobiles">
-      <p>Mobiles</p>
-    </div>
-    <div class="col-6 col-md-2 category-card mb-3">
-      <img src="https://via.placeholder.com/100" class="img-fluid" alt="Electronics">
-      <p>Electronics</p>
-    </div>
-    <div class="col-6 col-md-2 category-card mb-3">
-      <img src="https://via.placeholder.com/100" class="img-fluid" alt="Fashion">
-      <p>Fashion</p>
-    </div>
-    <div class="col-6 col-md-2 category-card mb-3">
-      <img src="https://via.placeholder.com/100" class="img-fluid" alt="Home">
-      <p>Home</p>
-    </div>
-    <div class="col-6 col-md-2 category-card mb-3">
-      <img src="https://via.placeholder.com/100" class="img-fluid" alt="Beauty">
-      <p>Beauty</p>
-    </div>
-    <div class="col-6 col-md-2 category-card mb-3">
-      <img src="https://via.placeholder.com/100" class="img-fluid" alt="Appliances">
-      <p>Appliances</p>
-    </div>
-  </div>
-</div>
+          <!-- Regular Category (No Dropdown) -->
+          <div class="col-auto">
+            <a href="#" class="text-decoration-none text-dark">
+              <img
+                src="https://rukminim1.flixcart.com/fk-p-flap/64/64/image/5f2ee7f883cdb774.png?q=100"
+                class="mb-1"
+                alt="Mobiles"
+              />
+              <div>Mobiles & Tablets</div>
+            </a>
+          </div>
 
-<!-- Product Section -->
-<div class="container my-5">
-  <h4 class="mb-3">Top Deals</h4>
-  <div class="row">
-    <div class="col-md-3 product-card mb-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="Product">
-        <div class="card-body text-center">
-          <h6 class="card-title">Product Name</h6>
-          <p class="text-success">₹499 <del class="text-muted">₹999</del></p>
+          <!-- Dropdown Category -->
+          <div class="col-auto dropdown">
+            <a
+              href="#"
+              class="text-decoration-none text-dark dropdown-toggle"
+              data-bs-toggle="dropdown"
+            >
+              <img
+                src="https://rukminim1.flixcart.com/fk-p-flap/64/64/image/ff559cb9d803d424.png?q=100"
+                class="mb-1"
+              />
+              <div>Fashion</div>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Men</a></li>
+              <li><a class="dropdown-item" href="#">Women</a></li>
+              <li><a class="dropdown-item" href="#">Kids</a></li>
+            </ul>
+          </div>
+
+          <!-- More categories (you can copy & change these) -->
+          <div class="col-auto dropdown">
+            <a
+              href="#"
+              class="text-decoration-none text-dark dropdown-toggle"
+              data-bs-toggle="dropdown"
+            >
+              <img
+                src="https://rukminim1.flixcart.com/fk-p-flap/64/64/image/af646c36d74c4be9.png?q=100"
+                class="mb-1"
+                alt="Electronics"
+              />
+              <div>Electronics</div>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Laptops</a></li>
+              <li><a class="dropdown-item" href="#">Cameras</a></li>
+            </ul>
+          </div>
+
+          <div class="col-auto dropdown">
+            <a
+              href="#"
+              class="text-decoration-none text-dark dropdown-toggle"
+              data-bs-toggle="dropdown"
+            >
+              <img
+                src="	https://rukminim1.flixcart.com/fk-p-flap/64/64/image/1788f177649e6991.png?q=100"
+                class="mb-1"
+                alt="Home"
+              />
+              <div>Home & Furniture</div>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Living Room</a></li>
+              <li><a class="dropdown-item" href="#">Bedroom</a></li>
+            </ul>
+          </div>
+
+          <div class="col-auto">
+            <a href="#" class="text-decoration-none text-dark">
+              <img
+                src="https://rukminim1.flixcart.com/fk-p-flap/64/64/image/e90944802d996756.jpg?q=100"
+                class="mb-1"
+                alt="TVs"
+              />
+              <div>TVs & Appliances</div>
+            </a>
+          </div>
+
+          <div class="col-auto">
+            <a href="#" class="text-decoration-none text-dark">
+              <img
+                src="https://rukminim1.flixcart.com/fk-p-flap/64/64/image/e90944802d996756.jpg?q=100"
+                class="mb-1"
+                alt="Flight"
+              />
+              <div>Flight Bookings</div>
+            </a>
+          </div>
+
+          <div class="col-auto dropdown">
+            <a
+              href="#"
+              class="text-decoration-none text-dark dropdown-toggle"
+              data-bs-toggle="dropdown"
+            >
+              <img
+                src="	https://rukminim1.flixcart.com/fk-p-flap/64/64/image/b3020c99672953b9.png?q=100"
+                class="mb-1"
+                alt="Beauty"
+              />
+              <div>Beauty, Food..</div>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Cosmetics</a></li>
+              <li><a class="dropdown-item" href="#">Snacks</a></li>
+            </ul>
+          </div>
+
+          <div class="col-auto">
+            <a href="#" class="text-decoration-none text-dark">
+              <img
+                src="https://rukminim1.flixcart.com/fk-p-flap/64/64/image/e730a834ad950bae.png?q=100"
+                class="mb-1"
+                alt="Grocery"
+              />
+              <div>Grocery</div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-3 product-card mb-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="Product">
-        <div class="card-body text-center">
-          <h6 class="card-title">Product Name</h6>
-          <p class="text-success">₹799 <del class="text-muted">₹1299</del></p>
+
+    <!-- Hero Banner Carousel -->
+    <div class="container-fluid p-0">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://rukminim1.flixcart.com/fk-p-flap/1620/270/image/351eb4bcb85e3319.jpeg?q=80"
+              class="d-block w-100"
+              alt="Banner 1"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://rukminim1.flixcart.com/fk-p-flap/1620/270/image/871de206742b3b29.jpeg?q=80"
+              class="d-block w-100"
+              alt="Banner 2"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://rukminim1.flixcart.com/fk-p-flap/1620/270/image/19c7694e065d1bd3.jpeg?q=80"
+              class="d-block w-100"
+              alt="Banner 3"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon bg-dark rounded-circle"
+          ></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon bg-dark rounded-circle"
+          ></span>
+        </button>
+      </div>
+    </div>
+    <!-- Product Section -->
+    <div class="container bg-white py-4">
+      <!-- Furniture Deals -->
+      <h6 class="fw-bold mb-3 px-3">Furniture Deals</h6>
+      <div class="d-flex overflow-auto gap-5 px-3" style="width: fit-content">
+        <div class="text-center" style="min-width: 120px">
+          <img
+            src="https://rukminim1.flixcart.com/image/120/120/j5ihlzk0/bed-mattress/2/y/c/6-48-75-skbnnldb75x48x06-bonnell-spring-peps-original-imaevnpjqz2mwyrz.jpeg?q=80"
+            class="img-fluid mb-1"
+            style="width: 120px; height: 120px; object-fit: scale-down"
+          />
+          <div>
+            Mattresses<br /><small class="text-muted">From ₹2,990</small>
+          </div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            src="https://rukminim1.flixcart.com/image/120/120/l4d2ljk0/sofa-sectional/x/j/l/left-facing-180-34-aqua-blue-241-3-polyester-80-steffan-l-sheped-original-imagf9zer8ptqhrh.jpeg?q=80"
+            class="img-fluid mb-1"
+          />
+          <div>
+            Sofa Sets<br /><small class="text-muted">From ₹7,999</small>
+          </div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            src="https://rukminim1.flixcart.com/image/120/120/xif0q/office-study-chair/z/t/2/1-teak-sagun-58-42-js-29-beaatho-121-92-original-imagrwgshgp2bhwv.jpeg?q=80"
+            class="img-fluid mb-1"
+          />
+          <div>
+            Study Chairs<br /><small class="text-muted">From ₹1,890</small>
+          </div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            src="https://rukminim1.flixcart.com/image/120/120/jm9hfgw0/bed/h/g/g/king-na-rosewood-sheesham-bkwl05nhbs0401d1p-flipkart-perfect-original-imaf97cwhvgnwg95.jpeg?q=80"
+            class="img-fluid mb-1"
+          />
+          <div>Beds<br /><small class="text-muted">From ₹1,790</small></div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            src="https://rukminim2.flixcart.com/image/120/120/xif0q/recliner/h/j/p/88-1-seater-burgundy-89-leatherette-rx5-sleepyhead-97-burgundy-original-imah8r9jzpm2grcy.jpeg?q=80"
+            class="img-fluid mb-1"
+          />
+          <div>Recliner<br /><small class="text-muted">From ₹2,790</small></div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            src="https://rukminim2.flixcart.com/image/120/120/xif0q/wardrobe-closet/p/z/g/-original-imah9edfbzmagzq8.jpeg?q=80"
+            class="img-fluid mb-1"
+          />
+          <div>Wardrobe<br /><small class="text-muted">From ₹5,999</small></div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            src="https://rukminim2.flixcart.com/image/120/120/xif0q/sofa-bed/3/q/4/-original-imagm9ckhma9u8a3.jpeg?q=80"
+            class="img-fluid mb-1"
+          />
+          <div>
+            Sofa Beds<br /><small class="text-muted">From ₹3,790</small>
+          </div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            src="https://rukminim2.flixcart.com/image/120/120/xif0q/dining-set/a/h/m/64-white-64-0-rosewood-sheesham-22-square-49-91-22-64-2-seater-original-imahajngcashpf3p.jpeg?q=80"
+            class="img-fluid mb-1"
+          />
+          <div>
+            Dining-set<br /><small class="text-muted">From ₹4,790</small>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-3 product-card mb-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="Product">
-        <div class="card-body text-center">
-          <h6 class="card-title">Product Name</h6>
-          <p class="text-success">₹1199 <del class="text-muted">₹1999</del></p>
+
+    <div class="container bg-white py-4 mt-3">
+      <!-- Fashion Deals -->
+      <h6 class="fw-bold mb-3 px-3">Fashion Deals</h6>
+      <div class="d-flex overflow-auto gap-5 px-3" style="width: fit-content">
+        <div class="text-center" style="min-width: 120px">
+          <img
+            style="height: 120px"
+            src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/2/w/h/xxl-db1041-3bros-original-imah94gqnzdjfxxr.jpeg?q=70"
+            class="img-fluid mb-1"
+          />
+          <div>T-Shirts<br /><small class="text-muted">From ₹199</small></div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            style="height: 120px"
+            src="https://rukminim2.flixcart.com/image/612/612/xif0q/sandal/q/6/m/8-3081-2-ar-bata-blue-yellow-original-imag29g4bnjckdeb-bb.jpeg?q=70"
+            class="img-fluid mb-1"
+          />
+          <div>Footwear<br /><small class="text-muted">Min 50% Off</small></div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            style="height: 120px"
+            src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/q/l/c/1-38024pp25-fastrack-men-original-imah4ncujudwehyn.jpeg?q=70"
+            class="img-fluid mb-1"
+          />
+          <div>Watches<br /><small class="text-muted">From ₹499</small></div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            style="height: 120px"
+            src="https://rukminim2.flixcart.com/image/120/120/xif0q/bottle/l/l/a/2000-leakproof-unbreabale-bpa-free-travel-gym-big-water-bottle-original-imagvy3zeybfrnse.jpeg?q=80"
+            class="img-fluid mb-1"
+          />
+          <div>
+            Water bottles<br /><small class="text-muted">Min 40% Off</small>
+          </div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            style="height: 120px"
+            src="https://rukminim2.flixcart.com/image/120/120/xif0q/umbrella/l/o/y/39-4-1pc-auto-8-ribs-umbrella-for-sun-rain-protection-man-woman-original-imahycxchaycxsrz.jpeg?q=80"
+            class="img-fluid mb-1"
+          />
+          <div>
+            Umbrellas<br /><small class="text-muted">Min 80% Off</small>
+          </div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            style="height: 120px"
+            src="https://rukminim2.flixcart.com/image/210/210/xif0q/cycle/z/g/n/14t-matrix-14-13-lsn-rides-50-single-speed-original-imahcp7sggwahyq7.jpeg?q=80"
+            class="img-fluid mb-1"
+          />
+          <div>Cycles<br /><small class="text-muted">Min 40% Off</small></div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            style="height: 120px"
+            src="https://rukminim2.flixcart.com/image/612/612/xif0q/sunglass/g/5/j/this-product-is-sold-as-free-size-by-the-brand-stn-mc-gbk-rg-004-original-imagsyqanvmekzxm.jpeg?q=70"
+            class="img-fluid mb-1"
+          />
+          <div>
+            Sunglasses<br /><small class="text-muted">Min 80% Off</small>
+          </div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            style="height: 120px"
+            src="https://rukminim2.flixcart.com/image/612/612/xif0q/keyboard/gaming-keyboard/p/f/h/swarm-wireless-mechanical-gaming-keyboard-5-pin-hot-swap-pcb-and-original-imah4u224gjjcrax.jpeg?q=70"
+            class="img-fluid mb-1"
+          />
+          <div>
+            KeyboardS<br /><small class="text-muted">Min 60% Off</small>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-3 product-card mb-4">
-      <div class="card">
-        <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="Product">
-        <div class="card-body text-center">
-          <h6 class="card-title">Product Name</h6>
-          <p class="text-success">₹299 <del class="text-muted">₹599</del></p>
+
+    <div class="container bg-white py-4 mt-3 mb-4">
+      <!-- Top Deals -->
+      <h6 class="fw-bold mb-3 px-3">Top Deals</h6>
+      <div class="d-flex overflow-auto gap-5 px-3" style="width: fit-content">
+        <div class="text-center" style="min-width: 120px">
+          <img
+            src="https://rukminim2.flixcart.com/image/120/120/xif0q/mobile/r/l/c/-original-imah3xk892aj9gck.jpeg?q=80"
+            class="img-fluid mb-1"
+          />
+          <div>
+            Smartphones<br /><small class="text-muted">From ₹9,999*</small>
+          </div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            style="height: 120px"
+            src="https://rukminim2.flixcart.com/image/612/612/xif0q/power-bank/q/u/r/-original-imahcyefpaafaaht.jpeg?q=70"
+            class="img-fluid mb-1"
+          />
+          <div>
+            Power Banks<br /><small class="text-muted">From ₹799</small>
+          </div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            style="height: 120px"
+            src="https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/c/m/b/-original-imahej2rwsypyzhh.jpeg?q=70"
+            class="img-fluid mb-1"
+          />
+          <div>Headphones<br /><small class="text-muted">From ₹299</small></div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            style="height: 120px"
+            src="https://rukminim2.flixcart.com/image/120/120/xif0q/television/u/d/4/-original-imahbzrghzxhsh4h.jpeg?q=80"
+            class="img-fluid mb-1"
+          />
+          <div>
+            Smart TVs<br /><small class="text-muted">From ₹12,499</small>
+          </div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            style="height: 120px"
+            src="https://rukminim2.flixcart.com/image/120/120/xif0q/refrigerator-new/q/w/0/-original-imahbf9sddpqv2ww.jpeg?q=80"
+            class="img-fluid mb-1"
+          />
+          <div>
+            Refrigerator<br /><small class="text-muted">From ₹10,499</small>
+          </div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            style="height: 120px"
+            src="https://rukminim2.flixcart.com/image/120/120/xif0q/microwave-new/s/x/b/-original-imahd82ez72afreh.jpeg?q=80"
+            class="img-fluid mb-1"
+          />
+          <div>
+            Microwave<br /><small class="text-muted">From ₹12,499</small>
+          </div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            style="height: 120px"
+            src="https://rukminim2.flixcart.com/image/120/120/xif0q/mixer-grinder-juicer/i/0/m/-original-imaghy69gbrjwkvz.jpeg?q=80"
+            class="img-fluid mb-1"
+          />
+          <div>
+            Kitchen-Essential<br /><small class="text-muted">From ₹1249</small>
+          </div>
+        </div>
+        <div class="text-center" style="min-width: 120px">
+          <img
+            style="height: 120px"
+            src="https://rukminim2.flixcart.com/image/120/120/xif0q/air-cooler/j/v/b/-original-imagzttvcu5ghcxm.jpeg?q=80"
+            class="img-fluid mb-1"
+          />
+          <div>Cooler<br /><small class="text-muted">From ₹4,499</small></div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- Footer -->
-<footer class="footer mt-auto">
-  <div class="container">
-    <div class="row text-center text-md-start">
-      <div class="col-md-3">
-        <h6>About</h6>
-        <p>Contact Us<br>About Us<br>Careers<br>Flipkart Stories</p>
+    <!-- Footer -->
+    <footer class="footer mt-auto pb-0">
+      <div class="container">
+        <div class="row text-center text-md-start">
+          <div class="col-md-3">
+            <h6>About</h6>
+            <p>Contact Us<br />About Us<br />Careers<br />Flipkart Stories</p>
+          </div>
+          <div class="col-md-3">
+            <h6>Help</h6>
+            <p>Payments<br />Shipping<br />Cancellation<br />FAQ</p>
+          </div>
+          <div class="col-md-3">
+            <h6>Consumer Policy</h6>
+            <p>Return Policy<br />Terms Of Use<br />Security<br />Privacy</p>
+          </div>
+          <div class="col-md-3">
+            <h6>Social</h6>
+            <p>Facebook<br />Twitter<br />YouTube</p>
+          </div>
+        </div>
       </div>
-      <div class="col-md-3">
-        <h6>Help</h6>
-        <p>Payments<br>Shipping<br>Cancellation<br>FAQ</p>
-      </div>
-      <div class="col-md-3">
-        <h6>Consumer Policy</h6>
-        <p>Return Policy<br>Terms Of Use<br>Security<br>Privacy</p>
-      </div>
-      <div class="col-md-3">
-        <h6>Social</h6>
-        <p>Facebook<br>Twitter<br>YouTube</p>
-      </div>
-    </div>
-  </div>
-</footer>
+      <div class="text-center mt-4 mb-0">&copy;2007-2025-Flipkart</div>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
